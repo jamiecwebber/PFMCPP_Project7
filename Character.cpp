@@ -26,8 +26,8 @@ void Character::attack( Character& other )
         
     isDefending = false;
     std::cout << getName() << " has attacked " << other.getName() << std::endl;
-    //subtract attackDamage from other->hitPoints
-    if( other.takeDamage(attackDamage) <= 0 )
+    
+    if( other.takeDamage(attackDamage) <= 0 ) 
     {
         //if you kill other, you get a boost in hit points and armor.
         attackInternal(other);
