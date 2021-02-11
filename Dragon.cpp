@@ -18,5 +18,13 @@ void Dragon::attack(Character &other)
 }
 
 //Dragon::getName
+const std::string& Dragon::getName()
+{
+    return name;
+}
 
 //Dragon::getStats
+std::string Dragon::getStats()
+{
+    //implement this
+}
