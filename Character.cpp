@@ -10,7 +10,6 @@ Character::Character(int hp, int armor_, int attackDamage_ ) :
     armor(armor_),
     attackDamage(attackDamage_)
 {
-    std::cout << "character constructor" << std::endl;
     initialHitPoints.reset( new int(hitPoints) );
     initialArmorLevel.reset( new int( armor) );
     initialAttackDamage.reset( new int( attackDamage) );
