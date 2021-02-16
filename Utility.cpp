@@ -9,7 +9,7 @@ std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
 {
     std::vector<std::unique_ptr<Item>> items;
     
-    while( num-- >= 0 )
+    while( num-- > 0 )
     {
         items.push_back( std::unique_ptr<HelpfulItem>(new HelpfulItem()) );
     }
@@ -22,7 +22,7 @@ std::vector<std::unique_ptr<Item>> makeDefensiveItems(int num)
 {
     std::vector<std::unique_ptr<Item>> items;
     
-    while( num-- >= 0 )
+    while( num-- > 0 )
     {
         items.push_back( std::unique_ptr<DefensiveItem>(new DefensiveItem()) );
     }
@@ -100,6 +100,7 @@ void useAttackItem(Character* character, Item* item)
         //so their attack item should boost their attack damage by a factor of 10
         //this means you need to GET the attack damage, multiply it by the item's boost, and BOOST the attackDamage with that multiplied value.  
         //check Character.h for available member functions you can use.
+        ch_dsattack->boostAttackDamage(item->getBoost() * character->getAttackDamage());
     }
     else if( auto* ch_dragattack = dynamic_cast<Dragon*>(character) )
     {
