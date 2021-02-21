@@ -3,7 +3,7 @@
 #include "Item.h"
 #include "Character.h"
 
-struct DefensiveItem : public Item
+struct DefensiveItem : Item
 {
     DefensiveItem() : Item("defensive item", 3) { }
     ~DefensiveItem() override {}
