@@ -71,5 +71,6 @@ protected:
 private:
     std::unique_ptr<int> initialHitPoints, initialArmorLevel, initialAttackDamage;
     
+    void levelUpStat(int& stat, std::unique_ptr<int>& initialStat);
     void attackInternal(Character& other);
 };
