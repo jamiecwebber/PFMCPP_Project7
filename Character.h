@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Item.h"
+#include "Utility.h"
 
 struct Character
 {
@@ -70,5 +71,6 @@ protected:
 private:
     std::unique_ptr<int> initialHitPoints, initialArmorLevel, initialAttackDamage;
     
+    void levelUpStat(int& stat, int& initialStat);
     void attackInternal(Character& other);
 };
